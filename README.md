@@ -1,6 +1,6 @@
 # Integer Class in C++
 
-This project demonstrates the implementation of a basic C++ class named `integer` that includes:
+This repository demonstrates the implementation of a basic C++ class named `integer` that includes:
 
 - A default constructor
 - A parameterized constructor
