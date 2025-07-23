@@ -1,0 +1,29 @@
+### ✅ `.gitignore`
+
+```gitignore
+# Compiled binary
+*.exe
+*.out
+*.o
+*.obj
+
+# Build directories
+/build/
+bin/
+Debug/
+Release/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+*.vcxproj*
+*.sln
+*.user
+*.ncb
+*.log
+
+# Backup files
+*~
+*.bak
