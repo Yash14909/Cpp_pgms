@@ -1,4 +1,3 @@
-Here’s a clear and professional **README.md** file for your C++ constructor demonstration program 👇
 
 ---
 
