@@ -1,55 +1,59 @@
 
 ---
 
-```markdown
-# 🧱 C++ Constructors Demonstration
+# 🧮 C++ Constructor Demonstration
 
-This project demonstrates the use of **default**, **parameterized**, and **copy constructors** in C++.  
-It shows how constructors are invoked automatically during object creation and how data members are initialized in each case.
+This C++ program demonstrates the **three types of constructors** used in object-oriented programming —
+**Default Constructor**, **Parameterized Constructor**, and **Copy Constructor**.
 
----
-
-## 🧩 Project Structure
-
-```
-```
-constructors-demo/
-│
-├── constructors.cpp     # Main C++ source file
-└── README.md            # Project documentation
-```
-
-````
+The program defines a class `integer` that initializes and displays two integer values using these constructors.
 
 ---
 
-## 💻 Code
+## 🧱 **Concepts Covered**
+
+* **Default Constructor** — initializes data members with default values
+* **Parameterized Constructor** — initializes data members with user-provided values
+* **Copy Constructor** — initializes an object using another existing object
+* **Object Creation and Display Functions**
+* Basic usage of **C++ Class & Object** concepts
+
+---
+
+## 📂 **File Information**
+
+| File                   | Description                                                      |
+| ---------------------- | ---------------------------------------------------------------- |
+| `constructor-demo.cpp` | Demonstrates all three types of constructors with console output |
+
+---
+
+## 💡 **Program Explanation**
+
+### 🧩 Class Definition
 
 ```cpp
-#include <iostream>
-
 class integer
 {
     int m, n;
-
 public:
-    integer()
+    integer()  // Default Constructor
     {
         std::cout << "I am in default constructor" << std::endl;
         m = 0;
         n = 0;
     }
 
-    integer(int x, int y)
+    integer(int x, int y)  // Parameterized Constructor
     {
         std::cout << "I am in parameterized constructor" << std::endl;
         m = x;
         n = y;
     }
 
-    integer(const integer &obj)
+    integer(const integer &obj)  // Copy Constructor
     {
-        std::cout << "I am in copy constructor constructor" << std::endl;
+        std::cout << "I am in copy constructor" << std::endl;
         m = obj.m;
         n = obj.n;
     }
@@ -60,61 +64,48 @@ public:
         std::cout << "value of n: " << n << std::endl;
     }
 };
+```
 
+### 🧠 **Main Function**
+
+```cpp
 int main()
 {
-    integer i1;        // Default constructor
+    integer i1;          // Calls default constructor
     i1.display();
 
-    integer i2(10, 20); // Parameterized constructor
+    integer i2(10, 20);  // Calls parameterized constructor
     i2.display();
 
-    integer i3 = i2;    // Copy constructor
+    integer i3 = i2;     // Calls copy constructor
     i3.display();
 
     return 0;
 }
-````
+```
 
 ---
 
-## 🧠 Explanation
+## ⚙️ **How to Compile and Run**
 
-### 🔹 1. **Default Constructor**
+### ▶️ Using GCC / Command Line
 
-* Called when an object is created without any arguments.
-* Initializes data members `m` and `n` to `0`.
+```bash
+g++ constructor-demo.cpp -o constructor-demo
+./constructor-demo
+```
 
-### 🔹 2. **Parameterized Constructor**
+### ▶️ Using Turbo C++
 
-* Called when arguments are passed during object creation.
-* Initializes data members `m` and `n` using provided values.
-
-### 🔹 3. **Copy Constructor**
-
-* Called when a new object is created as a copy of an existing object.
-* Copies values of data members from the source object.
-
----
-
-## ▶️ How to Run
-
-1. Save the code as `constructors.cpp`.
-2. Open your terminal and navigate to the file’s location.
-3. Compile the program:
-
-   ```bash
-   g++ constructors.cpp -o constructors
-   ```
-4. Run the executable:
-
-   ```bash
-   ./constructors
-   ```
+1. Open Turbo C++
+2. Create a new file → Paste the code
+3. Save as `constructor-demo.cpp`
+4. Compile (`Alt + F9`)
+5. Run (`Ctrl + F9`)
 
 ---
 
-## 📟 Sample Output
+## 🧾 **Sample Output**
 
 ```
 I am in default constructor
@@ -125,28 +116,28 @@ I am in parameterized constructor
 value of m: 10
 value of n: 20
 
-I am in copy constructor constructor
+I am in copy constructor
 value of m: 10
 value of n: 20
 ```
 
 ---
 
-## 🧩 Concepts Demonstrated
+## 🎯 **Learning Outcome**
 
-* Constructor overloading
-* Copy constructor usage
-* Object initialization
-* Class member access
-* C++ object lifecycle
+By running this program, you will understand:
+
+* How constructors initialize objects in C++
+* The difference between **default**, **parameterized**, and **copy constructors**
+* The use of object copying and initialization through constructors
 
 ---
 
-## 💡 Tip
+## 👨‍💻 **Author**
 
-If you don’t define a **copy constructor**, C++ automatically generates a **default copy constructor** that performs a shallow copy.
-Defining your own copy constructor allows **customized copy behavior**.
+* Developed by:** Yashvardhan Reddy
+* Language:** C++
+* Topic:** Constructors in Object-Oriented Programming
+* IDE Support:** Turbo C++, GCC, Code::Blocks, VS Code
 
-```
-
-```
+---
